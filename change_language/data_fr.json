@@ -1,0 +1,8 @@
+{
+    "title": "Je suis Json",
+    "button": "Changer la langue",
+    "description": "voici un petit programme qui permet de changer la langue de la page via deux json. L'un contient des données en anglais, l'autre en français.",
+    "home": "Acceuil",
+    "features": "Rubriques",
+    "contact": "Contact"
+}

@@ -1,0 +1,8 @@
+{
+    "title": "I am Json",
+    "button": "Change language",
+    "description": "Here is a little program wich allow to change language via two json files. One contains data in English, the other in French.",
+    "home": "Home",
+    "features": "Features",
+    "contact": "Contact"
+}
