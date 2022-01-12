@@ -9,3 +9,4 @@ add = () => {
 substract = () => {
     result.innerHTML = input_1.value - input_2.value
 }
+
