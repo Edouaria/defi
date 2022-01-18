@@ -1275,7 +1275,6 @@ let new_sentence = ""
 let new_msg = ""
 
 function show_msg_only_with_regex(text) {
-    new_sentence = text.replace(/^[a - z][A - Z]{ 3}[a - z][A - Z]{ 3}[a - z]/, "")
     new_sentence = text.match(regex)
     for (let i = 0; i < new_sentence.length; i++) {
         const element = new_sentence[i];
