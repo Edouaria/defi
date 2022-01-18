@@ -1249,39 +1249,3 @@ dCdFLtBQPtFQuCdKOrpndJNUFQIDSbetUKylhSUjcDVtbiQrWMRQhAwGUZyPneCGUjGBBTkLqxLAXXtB
 KfErkDaWMFZZeuqDmXKJEGHyToPUhPphfVhgUZgbIuRAtWnroImpJKqqmEZqeNQCKzhjIkKQHURWLXFw
 PBuijeoTSpsVLaOGuLVjMZXkBvVXwUuHfBihziiavGSYofPNeKsTXruMUumRRPQJzvSzJkKbtSipiqBd
 `
-
-// METHOD_1
-const regex = new RegExp('[a-z][A-Z]{3}[a-z ][A-Z]{3}[a-z]', "g")
-let msg = ""
-
-function show_msg(text) {
-    for (let i = 0; i < text.length; i++) {
-        let pattern = ""
-        for (let j = 0; j < 9; j++) {
-            letter = text[(i+j) % text.length]
-            pattern += letter
-        }
-        if (pattern.match(regex)) {
-            msg += pattern[4]
-        }
-    }
-    console.log("method_1", msg);
-}
-
-show_msg(sentence)
-
-// METHOD_2
-let new_sentence = ""
-let new_msg = ""
-
-function show_msg_only_with_regex(text) {
-    new_sentence = text.replace(/^[a - z][A - Z]{ 3}[a - z][A - Z]{ 3}[a - z]/, "")
-    new_sentence = text.match(regex)
-    for (let i = 0; i < new_sentence.length; i++) {
-        const element = new_sentence[i];
-        new_msg += element[4]
-    }
-    console.log("method_2", new_msg);
-}
-
-show_msg_only_with_regex(sentence)
