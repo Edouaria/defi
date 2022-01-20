@@ -1,0 +1,2 @@
+trouver le message caché dans la chaine de caracter donnée
+ne récupérer uniquement que les lettres de l'alphabet dans cette chaine

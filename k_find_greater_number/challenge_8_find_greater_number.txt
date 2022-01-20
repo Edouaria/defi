@@ -1,0 +1,2 @@
+parmi une suite de nombre, déterminer le quel est le plus grand
+la fonction prendra en argument un tableau de nombre

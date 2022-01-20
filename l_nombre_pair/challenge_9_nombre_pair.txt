@@ -1,0 +1,2 @@
+créez une fonction qui prend en argument un nombre de départ et un nombre d'arrivé
+la fonction retourne tout les nombres pairs entre le nombre de départ et le nombre d'arrivé

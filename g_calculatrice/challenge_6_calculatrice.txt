@@ -1,0 +1,2 @@
+créez une calculatrice avec deux input côté html et au minimum deux bouton pour avec une fonction additionner et une fonction soustraire
+les boutons additionne ou soustrait les deux input et le message s'écrit en dessous

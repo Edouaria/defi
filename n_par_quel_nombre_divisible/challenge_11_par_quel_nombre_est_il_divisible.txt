@@ -1,0 +1,2 @@
+créez une fonction qui prend un nombre en argument
+La fonction retourne les nombres par lequel le nombre est divisible

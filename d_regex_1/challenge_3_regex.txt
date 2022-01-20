@@ -1,0 +1,3 @@
+un message est caché dans la chaine de caracter donnée
+un pattern se répète le voici : 3 majuscule suivi de 3 minuscule suivi d'une minuscule suivi de 3 majuscule
+ne récupérer que la minuscule isolé pour chaque pattern et trouver le message

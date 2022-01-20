@@ -1,0 +1,7 @@
+le programme génère un nombre aléatoirement
+vous devez le devinez
+vous entrez la valeur dans un input et valider l'entrée
+Si votre choix est inférieur au nombre choisi par le programme il affiche "c'est plus"
+sinon "c'est moins"
+Si vous trouvez la bonne réponse le programme affiche "c'est gagné"
+en bonus affichez le nombre d'essai avant d'avoir réussi
