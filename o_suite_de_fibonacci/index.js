@@ -1,11 +1,15 @@
-let total = []
+// 01...
+// ABC
+
+let preprev = 0
+let prev = 1
 let res = 0
 function fibonacci(sequence) {
     for (let i = 0; i <= sequence; i++) {
-        if (i < sequence) {
-            res = (res + (i + 1))
-            total.push(res)
-        }
+        res = preprev + prev
+        preprev = prev
+        prev = res
+        console.log(res);
     }
-    console.log(total)
+    
 }
