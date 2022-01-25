@@ -1,0 +1,4 @@
+Le caroussel
+Vous avez une liste d'image ( de balise img )
+vous ne voulez en afficher qu'une seul à la fois donc par default elle sont toutes "non afficher"
+Vous avez deux boutons qui affiche l'image suivante ou l'image précédente, vous devez donc incrémenter ou décrémenter l'index de votre element dans votre tableau d'image
