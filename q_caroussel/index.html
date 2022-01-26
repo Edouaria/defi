@@ -10,28 +10,44 @@
 </head>
 <body>
     <div id="container">
-        <img class="logo active" src= "img/bash_logo.png" alt="bash" width="100px"></img>
-        <img class="logo" src= "img/linux_logo.png" alt="linux" width="100px"></img>
-        <img class="logo" src= "img/react_logo.png" alt="react" width="100px"></img>
-        <img class="logo" src= "img/python_logo.png" alt="python" width="100px"></img>
-        <img class="logo" src= "img/p5_logo.png" alt="p5" width="100px"></img>
-        <img class="logo" src= "img/godot_logo.png" alt="godot" width="100px"></img>
-        <img class="logo" src= "img/git_logo.png" alt="git" width="100px"></img>
-        <img class="logo" src= "img/krita_logo.png" alt="krita" width="100px"></img>
-        <img class="logo" src= "img/inkscape_logo.png" alt="inkscape" width="100px"></img>
-        <img class="logo" src= "img/vlc_logo.png" alt="vlc" width="100px"></img>
-        <img class="logo" src= "img/mongodb_logo.png" alt="mongodb" width="100px"></img>
-        <img class="logo" src= "img/nodejs_logo.svg" alt="nodejs" width="100px"></img>
-        <img class="logo" src= "img/blender_logo.svg" alt="blender" width="100px"></img>
-        <img class="logo" src= "img/audacity_logo.png" alt="audacity" width="100px"></img>
-        <img class="logo" src= "img/openstreetmap_logo.png" alt="openstreetmap" width="100px"></img>
-        <img class="logo" src= "img/framasoft_logo.png" alt="framasoft" width="100px"></img>
-        <button class="button_prev" onclick="prev()">
+        <img class="logo active" src= "img/bash_logo.png" alt="bash" width="100px">
+        <img class="logo" src= "img/linux_logo.png" alt="linux" width="100px">
+        <img class="logo" src= "img/react_logo.png" alt="react" width="100px">
+        <img class="logo" src= "img/python_logo.png" alt="python" width="100px">
+        <img class="logo" src= "img/p5_logo.png" alt="p5" width="100px">
+        <img class="logo" src= "img/godot_logo.png" alt="godot" width="100px">
+        <img class="logo" src= "img/git_logo.png" alt="git" width="100px">
+        <img class="logo" src= "img/krita_logo.png" alt="krita" width="100px">
+        <img class="logo" src= "img/inkscape_logo.png" alt="inkscape" width="100px">
+        <img class="logo" src= "img/vlc_logo.png" alt="vlc" width="100px">
+        <img class="logo" src= "img/mongodb_logo.png" alt="mongodb" width="100px">
+        <img class="logo" src= "img/nodejs_logo.svg" alt="nodejs" width="100px">
+        <img class="logo" src= "img/blender_logo.svg" alt="blender" width="100px">
+        <img class="logo" src= "img/audacity_logo.png" alt="audacity" width="100px">
+        <img class="logo" src= "img/openstreetmap_logo.png" alt="openstreetmap" width="100px">
+        <img class="logo" src= "img/framasoft_logo.png" alt="framasoft" width="100px">
+        <button class="button_prev" onclick="next(-1)">
             <
         </button>
-        <button class="button_next" onclick="next()">
+        <button class="button_next" onclick="next(1)">
             >
         </button>
+        <button id="bash" class="puce puce-active" onclick="show(0)"></button>
+        <button id="linux" class="puce" onclick="show(1)"></button>
+        <button id="react" class="puce" onclick="show(2)"></button>
+        <button id="python" class="puce" onclick="show(3)"></button>
+        <button id="p5" class="puce" onclick="show(4)"></button>
+        <button id="godot" class="puce" onclick="show(5)"></button>
+        <button id="git" class="puce" onclick="show(6)"></button>
+        <button id="krita" class="puce" onclick="show(7)"></button>
+        <button id="inkscape" class="puce" onclick="show(8)"></button>
+        <button id="vlc" class="puce" onclick="show(9)"></button>
+        <button id="mongodb" class="puce" onclick="show(10)"></button>
+        <button id="nodejs" class="puce" onclick="show(11)"></button>
+        <button id="blender" class="puce" onclick="show(12)"></button>
+        <button id="audacity" class="puce" onclick="show(13)"></button>
+        <button id="openstreetmap" class="puce" onclick="show(14)"></button>
+        <button id="framasoft" class="puce" onclick="show(15)"></button>
     </div>
 </body>
 </html>

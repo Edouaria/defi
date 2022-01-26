@@ -1,19 +1,24 @@
 const list_img = document.getElementsByClassName('logo')
-let index_img = 0
+const list_puce = document.getElementsByClassName('puce')
+let index = 0
 
 
-function prev() {
-    list_img[index_img].classList.remove('active')
-    index_img -= 1
-    if (index_img < 0) {
-        index_img = list_img.length - 1
+function next(n) {
+    list_img[index].classList.remove('active')
+    list_puce[index].classList.remove('puce-active')
+    index += n
+    if (index < 0) {
+        index = list_img.length - 1
     }
-    list_img[index_img].classList.add('active')
+    index %= list_img.length
+    list_img[index].classList.add('active')
+    list_puce[index].classList.add('puce-active')
 }
 
-function next() {
-    list_img[index_img].classList.remove('active')
-    index_img += 1
-    index_img %= list_img.length
-    list_img[index_img].classList.add('active')
+function show(n) {
+    list_img[index].classList.remove('active')
+    list_puce[index].classList.remove('puce-active')
+    index = n
+    list_img[index].classList.add('active')
+    list_puce[index].classList.add('puce-active')
 }
