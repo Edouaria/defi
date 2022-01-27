@@ -30,7 +30,6 @@ body {
     top: 50%;
     transform: translate(0, -50%);
     background: rgba(0, 0, 0, .3);
-    transition: all .5s;
     font-size: 2rem;
     font-weight: bold;
 }

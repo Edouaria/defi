@@ -26,10 +26,10 @@
         <img class="logo" src= "img/audacity_logo.png" alt="audacity" width="100px">
         <img class="logo" src= "img/openstreetmap_logo.png" alt="openstreetmap" width="100px">
         <img class="logo" src= "img/framasoft_logo.png" alt="framasoft" width="100px">
-        <button class="button_prev" onclick="next(-1)">
+        <button class="button_prev" onclick="next(-1)" onmousedown="mouse_down(-1)" onmouseup="mouse_up()">
             <
         </button>
-        <button class="button_next" onclick="next(1)">
+        <button class="button_next" onclick="next(1)" onmousedown="mouse_down(1)" onmouseup="mouse_up()">
             >
         </button>
         <button id="bash" class="puce puce-active" onclick="show(0)"></button>
