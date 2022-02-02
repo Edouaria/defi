@@ -1,0 +1,3 @@
+Ecrivez une fonction prenant un seul argument itérable ( un tableau ).
+La fonction doit multiplier toutes les valeurs de l'itérable donné.
+Par exemple, mul([1, 2, 3]) doit calculer 1 × 2 × 3.
