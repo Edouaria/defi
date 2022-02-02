@@ -8,15 +8,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, .2);
 }
 
 .container {
     width: 500px;
-    border: 1px solid wheat;
     border-radius: 3px;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    background-color: white;
+}
+
+h3 {
+    margin: 20px auto;
 }
 
 form {
@@ -41,6 +46,10 @@ ul {
     list-style: none;
 }
 
+li input {
+    flex: 1
+}
+
 li p {
     margin: 0;
     flex: 1;
@@ -51,17 +60,18 @@ li {
     align-items: center;
 }
 
-li .todo {
-    background-color: darkgray;
+.todo {
+    background-color: white;
     flex: 0 0 20px;
     height: 20px;
-    border-radius: 30px;
-    margin-right: 15px;
+    border-radius: 100%;
+    margin: 0 15px;
     border: 2px solid darkslategrey;
 }
 
-li .todo.done {
-    background-color: darkslategrey;
+.done {
+    background-color: gold;
+    border: 2px solid red;
 }
 
 button {
@@ -69,5 +79,21 @@ button {
     padding: 5px 15px;
     border: 0;
     border-radius: 5px;
-    margin: 0 3px;
+    margin: 5px 5px;
+}
+
+li {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+button, h3, p {
+    color:darkslateblue
 }
