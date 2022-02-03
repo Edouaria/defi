@@ -1,0 +1,7 @@
+créer un bouton qui permet de changer la langue de la page avec l'utilisation du JSON.
+ne créez pas une page sophistiquer, le fait de changer un seul élément text suffira.
+premier objectif : créez un fichier json et afficher les données de celui-ci dans une page html
+
+vous réfléchirez plus tard sur comment changer la langue
+
+le mot clé : fetch
