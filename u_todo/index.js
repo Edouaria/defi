@@ -17,13 +17,14 @@ const todos = []
 function display_todo() {
     const todos_nodes = todos.map((todo, index) => {
         if (todo.edit_mode) {
-            return edit_todo_node(todo, index)
+            return edit_todo_node(todo)
         } else {
             return create_todo_node(todo, index)
         }
     })
     ul.innerHTML = ''
     ul.append(...todos_nodes)
+    input.focus()
 }
 
 function create_todo_node(todo, index) {
@@ -56,7 +57,7 @@ function create_todo_node(todo, index) {
     return li
 }
 
-function edit_todo_node(todo, index) {
+function edit_todo_node(todo) {
     const li = document.createElement('li')
     const input = document.createElement('input')
     input.type = 'text'
