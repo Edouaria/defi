@@ -1,0 +1,1 @@
+most simple way to call a json file with fetch
