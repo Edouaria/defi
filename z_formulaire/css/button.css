@@ -16,13 +16,13 @@
   transition: box-shadow 0.2s;
 }
 .btn-primary {
-  background: limegreen;
+  background: forestgreen;
   color: white;
 }
 .btn-secondary {
-  border: 1px solid limegreen;
+  border: 1px solid forestgreen;
   background: white;
-  color: limegreen;
+  color: forestgreen;
 }
 
 #errors {
