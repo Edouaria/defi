@@ -1,0 +1,2 @@
+Créez une fonction qui renvoie toutes les pairs de lettres possible.
+exemple : aa ab ac ad .... jusqu'à zz
