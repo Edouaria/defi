@@ -1,0 +1,2 @@
+Créez une fonction qui prend une chaine de caractère en argument.
+La fonction affiche si le mot est un palindrome ou non.
