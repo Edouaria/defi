@@ -1,0 +1,1 @@
+Créez une fonction dist, recevant une liste de nombres (entiers ou à virgule flottante), et renvoyant la plus grande distance entre deux valeurs données, c'est-à-dire la distance entre la plus grande et la plus petite.
