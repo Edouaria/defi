@@ -1,0 +1,17 @@
+Vous travaillez pour un restaurant et on vous demande de générer le menu des sorbets.
+
+Fournissez un script qui imprime tous les duos de sorbets possibles à partir d'une liste donnée de saveurs.
+
+N'imprimez pas les recettes avec deux fois le même parfum (pas de "Chocolat Chocolat"), et n'imprimez pas deux fois la même recette (si vous imprimez "Chocolat Vanille", n'imprimez pas "Vanille Chocolat", ou vice-versa).
+
+Les saveurs sont :
+
+FLAVORS = [
+"Banane",
+"Chocolat",
+"Citron",
+"Pistache",
+"Framboise",
+"Fraise",
+"Vanille",
+]
