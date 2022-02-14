@@ -43,3 +43,21 @@ function generator_menu_3() {
 }
 
 generator_menu_3()
+
+//////////// METHOD 4 //////////////
+let pairSorbets = "";
+let intru = [];
+
+function showPair() {
+    for (const parfumFirst of sorbets) {
+        for (const parfumSecond of sorbets) {
+            if (parfumFirst != parfumSecond & intru.includes(parfumSecond) == false) {
+                pairSorbets += parfumFirst + "/" + parfumSecond + ", ";
+            }
+        }
+        intru.push(parfumFirst);
+    }
+    console.log(pairSorbets);
+}
+
+// showPair();
