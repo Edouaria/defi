@@ -1,0 +1,36 @@
+De Pyris, avec amour.
+Il était une fois, à Paris, la ville du romantisme, Bob et Alice se rencontrent et tombent amoureux l'un de l'autre.
+
+Première partie
+
+L'amour
+Pour concrétiser leur idylle, ils veulent se rencontrer le plus possible. Ils partagent leurs chemins quotidiens entre les quartiers de Paris pour savoir où ils peuvent se trouver au même endroit.
+
+Comme vous le savez, il y a 20 arrondissements à Paris :
+
+{"Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "ⅩⅠ", "ⅩⅡ", "ⅩⅢ", "ⅩⅣ", "ⅩⅤ", "ⅩⅥ", "ⅩⅦ", "ⅩⅧ", "ⅩⅠⅩ", "ⅩⅩ"}
+
+Codez une fonction nommée love_meet prenant les chemins quotidiens de bob et alice sous forme de deux listes et renvoyant un ensemble de quartiers qu'ils visitent tous les deux dans la journée.
+
+alice = ['Ⅱ', 'Ⅳ', 'ⅩⅠⅩ', 'ⅩⅤ', 'Ⅳ', 'Ⅱ']
+bob = ['Ⅳ', 'Ⅲ', 'Ⅱ', 'ⅩⅩ', 'Ⅱ', 'ⅩⅩ']
+
+love_meet(bob, alice)
+retourne {'Ⅱ', 'Ⅳ'}
+
+
+Deuxième partie
+
+Le temps passe, et l'amour passe...
+
+broke
+Alice s'ennuie et a le béguin pour le beau et fort Silvester. Afin d'avoir une liaison avec Silvester, elle doit trouver où Silvester et elle vont pendant la journée. Mais pour éviter une rencontre malheureuse avec Bob, elle doit s'assurer que Bob n'y va pas aussi.
+
+Pour le bien de son nouvel amour, fournissez à Alice la fonction affair_meet qui prend le chemin quotidien de Bob, Alice et Silvestre dans Paris, et retourne un ensemble de tous les endroits où Alice et Silvestre peuvent se rencontrer et être sûrs que Bob n'y sera pas.
+
+alice = ['Ⅱ', 'Ⅳ', 'Ⅱ', 'ⅩⅠⅩ', 'ⅩⅤ', 'Ⅳ', 'Ⅲ']
+bob = ['Ⅳ', 'Ⅲ', 'Ⅱ', 'ⅩⅩ', 'Ⅱ', 'ⅩⅩ']
+silvester = ['ⅩVⅢ', 'ⅩⅠⅩ', 'Ⅲ', 'Ⅰ', 'Ⅲ', 'ⅩVⅢ']
+
+affair_meet(bob, alice, silvester)
+retourne {'ⅩⅠⅩ'}
