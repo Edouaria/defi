@@ -1,0 +1,21 @@
+defi js
+
+exo 1
+
+Ecrivez une fonction sort_a_list qui prend une liste comme argument et retourne la liste triée dans l'ordre décroissant, comme :
+>> sort_a_list([1, 3, 2, 4, 6, 5, 9, 7])
+[9, 7, 6, 5, 4, 3, 2, 1]
+
+exo 2
+
+Selon une liste où chaque élément est une paire composée d'une note et d'un nom d'étudiant, comme suit :
+>> ma_classe = [[85, 'Susan Maddox'], [6, 'Joshua Tran'], [37, 'Jeanette Wafer']]
+Ecrivez une fonction nommée sort_by_mark qui prend en argument une liste similaire et la retourne triée par marque dans l'ordre décroissant. Par exemple :
+>> sort_by_mark(ma_classe)
+[[85, 'Susan Maddox'], [37, 'Jeanette Wafer'], [6, 'Joshua Tran']]
+
+exo 3
+
+Ecrivez une fonction nommée sort_by_name qui prend en argument une liste similaire et la retourne triée par nom dans l'ordre croissant, comme :
+>> sort_by_name(ma_classe)
+[[37, 'Jeanette Wafer'], [6, 'Joshua Tran'], [85, 'Susan Maddox']]
