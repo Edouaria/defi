@@ -27,3 +27,16 @@ const affair_meet = () => {
 }
 
 affair_meet()
+
+function love_meet_2() {
+    let res = []
+    alice.map(element => {
+        if (bob.includes(element) & !res.includes(element)) {
+            res.push(element)
+        }
+    })
+    console.log('res', ...res);
+    
+}
+
+// love_meet_2()
