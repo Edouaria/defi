@@ -22,6 +22,7 @@ const obj = [
         'age': 39
     }
 ]
+
 let nodes_to_be_removed = []
 
 function show_elements(obj) {
@@ -39,11 +40,26 @@ show_elements(obj)
 
 name_button.addEventListener('click', () => {
     toggle_name = !toggle_name
-    sort_elements()
+    sort_elements_by_name()
 })
 
-function sort_elements() {
+age_button.addEventListener('click', () => {
+    toggle_age = !toggle_age
+    sort_elements_by_age()
+})
+
+function sort_elements_by_name() {
     if (toggle_name) {
+        const sorted = obj.sort((a, b) => a.name.localeCompare(b.name))
+        show_elements(sorted)
+    } else {
+        const sorted = obj.sort((a, b) => b.name.localeCompare(a.name))
+        show_elements(sorted)
+    }
+}
+
+function sort_elements_by_age() {
+    if (toggle_age) {
         const sorted = obj.sort((a, b) => a.age - b.age)
         show_elements(sorted)
     } else {

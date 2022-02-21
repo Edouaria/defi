@@ -1,0 +1,2 @@
+Créez une fonction qui prend deux chaines de caractere en argument
+La fonction doit vérifier que les deux chaines sont des anagrammes l'une de l'autre
