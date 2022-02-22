@@ -31,14 +31,14 @@ function create_todo_node(todo, index) {
     const li = document.createElement('li')
 
     const button_delete = document.createElement('button')
-    button_delete.innerHTML = 'Supprimer'
+    button_delete.innerHTML = 'Delete'
     button_delete.addEventListener('click', event => {
         event.stopPropagation()
         delete_task(index)
     })
 
     const button_edit = document.createElement('button')
-    button_edit.innerHTML = 'Editer'
+    button_edit.innerHTML = 'Edit'
     button_edit.addEventListener('click', event => {
         event.stopPropagation()
         toggle_edit(todo)
