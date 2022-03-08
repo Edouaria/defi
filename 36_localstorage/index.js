@@ -1,7 +1,7 @@
 // STORE DATA TASK IN OBJECT
 let obj = {
-    'nom': 'edouard',
-    'age': 37
+    'title': 'faire les courses',
+    'done': false
 }
 
 // STORE EACH OBJECT IN ARRAY
@@ -16,12 +16,12 @@ console.log(JSON.parse(localStorage.getItem("obj")));
 obj_list = JSON.parse(localStorage.getItem("obj"))
 
 // MODIFY ONE OBJECT
-obj_list[0].nom = 'toto'
+obj_list[0].title = 'faire à manger'
 
 // CREATE NEW OBJECT
 new_obj = {
-    'nom': 'Mario',
-    'age': 43
+    'title': 'faire du sport',
+    'done': false
 }
 
 // APPEND NEW OBJECT IN ARRAY
