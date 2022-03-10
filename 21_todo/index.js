@@ -1,7 +1,9 @@
 const ul = document.querySelector('ul')
 const form = document.querySelector('form')
 const input = document.querySelector('form > input')
-const todos = []
+let todos = []
+
+localStorage.length != 0 ? todos = JSON.parse(localStorage.getItem('todos')) : ""
 
 // CHECK FORMULAR
 form.addEventListener('submit', (event) => {
@@ -19,11 +21,10 @@ form.addEventListener('submit', (event) => {
 
 // DISPLAY TASK LIST
 function display_todo() {
-
     // FOR EVERY TASK OBJECT, CHECK EDIT MODE
     const todos_nodes = todos.map((todo, index) => {
         if (todo.edit_mode) {
-            return edit_todo_node(todo)
+            return edit_todo_node(todo, index)
         } else {
             return create_todo_node(todo, index)
         }
@@ -76,7 +77,7 @@ function create_todo_node(todo, index) {
 }
 
 // EDIT TASK
-function edit_todo_node(todo) {
+function edit_todo_node(todo, index) {
 
     // CREATE LIST TAG
     const li = document.createElement('li')
@@ -90,7 +91,7 @@ function edit_todo_node(todo) {
     button_save.innerHTML = 'Save'
     // ADD EVENT TO BUTTON SAVE
     button_save.addEventListener('click', () => {
-        edit_task(todo, input)
+        edit_task(index, input)
     })
 
     // CREATE BUTTON CANCEL
@@ -112,17 +113,20 @@ function add_task(text) {
         text,
         done: false,
     })
+    localStorage.setItem("todos", JSON.stringify(todos))
 }
 
 // DELETE TASK PROPERTY
 function delete_task(index) {
     todos.splice(index, 1)
+    localStorage.setItem("todos", JSON.stringify(todos))
     display_todo()
 }
 
 // TOGGLE DONE TASK
 function toggle_done_task(index) {
     todos[index].done = !todos[index].done
+    localStorage.setItem("todos", JSON.stringify(todos))
     display_todo()
 }
 
@@ -133,10 +137,11 @@ function toggle_edit(todo) {
 }
 
 // EDIT TASK PROPERTY
-function edit_task(todo, input) {
+function edit_task(index, input) {
     const value = input.value
-    todo.text = value
-    todo.edit_mode = false
+    todos[index].text = value
+    todos[index].edit_mode = false
+    localStorage.setItem("todos", JSON.stringify(todos))
     display_todo()
 }
 
