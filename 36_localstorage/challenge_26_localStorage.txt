@@ -1,0 +1,7 @@
+Utilisez localStorage pour stocker des données temporaire
+Récupérer ces données
+modifier les
+réinjecter les dans localStorage
+puis réafficher le résultat
+
+Vous pouvez implémenter localStorage sur la todo-list ( Projet )

@@ -1,0 +1,4 @@
+Créer une myre d'authentification
+Il y a un champs pour le nom d'utilisateur
+et un champs pour le mot de passe
+Si le nom d'utilisateur et le mot de passe sont correcte, vous êtes renvoyé sur la page Profil sur la-quelle s'affiche votre nom d'utilisateur
