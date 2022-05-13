@@ -4,9 +4,15 @@ const sec = document.getElementsByClassName('sec')
 dots = document.querySelector('.dots')
 
 const display_dots = () => {
+    let count = 0
     for (let i = 0; i < 360; i += 6) {
         const dot = document.createElement('div')
         dot.className = 'dot'
+        if (count >= 5) {
+            dot.classList.add('big_dot')
+            count = 0
+        }
+        count += 1
         let radian = i * (Math.PI/180)
         let x = Math.cos(radian) * 190
         let y = Math.sin(radian) * 190
@@ -14,6 +20,7 @@ const display_dots = () => {
         dot.style.top = `${y}px`
         dots.appendChild(dot)
     }
+    document.getElementsByClassName('dot')[0].classList.add('big_dot')
 }
 
 display_dots()
