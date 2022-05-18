@@ -32,22 +32,28 @@ body {
     transform: translate(-50%, -50%)
 }
 
-.hour {
+#hour {
     width: 8px;
-    height: 160px;
+    height: 140px;
     background-color: black;
 }
 
-.min {
+#min {
     width: 8px;
-    height: 170px;
+    height: 160px;
     background-color: rgb(70, 70, 70);
 }
 
-.sec {
+#sec {
     width: 8px;
     height: 180px;
     background-color: rgb(140, 140, 140);
+}
+
+.dots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 .dot {
@@ -62,10 +68,4 @@ body {
 .big_dot {
     width: 10px;
     height: 10px;
-}
-
-.dots {
-    position: absolute;
-    top: 50%;
-    left: 50%;
 }
