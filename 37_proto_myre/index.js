@@ -1,4 +1,4 @@
-const button = document.querySelector('button')
+const button = document.querySelector('#submit')
 const name_input = document.querySelector('input[name="name_input"]')
 const pwd_input = document.querySelector('input[name="pwd_input"]')
 const p = document.querySelector('#error')
