@@ -1,0 +1,77 @@
+body {
+    background-color: blanchedalmond;
+}
+
+#container {
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    width: 200px;
+    height: 200px;
+    /* background-color: chartreuse; */
+}
+
+#joint_1 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background-color: blue; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#arm_1 {
+    position: absolute;
+    width: 200px;
+    height: 5px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+}
+
+#joint_2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background-color: black; */
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%)
+}
+
+#arm_2 {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+}
+
+#pen {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background-color: blueviolet; */
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+}
+
+.dot {
+    position: absolute;
+    /* width: 20px;
+    height: 20px; */
+    border-radius: 50%;
+    border: solid black 3px;
+    /* background-color: black; */
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+}
