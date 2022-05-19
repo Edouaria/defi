@@ -1,5 +1,5 @@
 body {
-    background-color: blanchedalmond;
+    background-color: rgba(0,0,0,0)
 }
 
 #container {
@@ -17,61 +17,21 @@ button {
     font-size: larger;
 }
 
-#joint_1 {
+.joint {
     position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     /* background-color: blue; */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
-
-#arm_1 {
-    position: absolute;
-    width: 100px;
-    border: solid black 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(0%, -50%);
-}
-
-#joint_2 {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    /* background-color: black; */
-    top: 50%;
     left: 100%;
     transform: translate(0%, -50%)
 }
 
-#arm_2 {
+.arm {
     position: absolute;
     width: 100px;
-    border: solid black 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(0%, -50%);
-}
-
-#joint_3 {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    /* background-color: black; */
-    top: 50%;
-    left: 100%;
-    transform: translate(0%, -50%)
-}
-
-#arm_3 {
-    position: absolute;
-    width: 100px;
-    border: solid black 2px;
+    border: solid black 1px;
     top: 50%;
     left: 50%;
     transform: translate(0%, -50%);
@@ -93,9 +53,47 @@ button {
     /* width: 20px;
     height: 20px; */
     border-radius: 50%;
-    border: solid black 2px;
-    /* background-color: black; */
+    z-index: 0;
+    border: solid black 1px;
     top: 50%;
     left: 100%;
     transform: translate(0%, -50%);
+    /* animation-name: border_color_transition;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
+}
+
+.arm_disappear {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    border: solid rgba(0,0,0,0) 1px;
+    animation-name: border_color_disappear;
+    animation-duration: 10s;
+}
+
+@keyframes border_color_disappear {
+  from {
+    border-color: black;
+  }
+  to {
+    border-color: rgba(0,0,0,0);
+  }
+}
+
+@keyframes border_color_transition {
+  from {
+    border-color: black;
+  }
+  25% {
+      border-color: red;
+  }
+  50% {
+      border-color: yellow;
+  }
+  to {
+    border-color: blanchedalmond;
+  }
 }

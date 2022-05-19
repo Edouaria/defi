@@ -1,7 +1,6 @@
 const body = document.querySelector('body')
-const joint_1 = document.getElementById('joint_1')
-const joint_2 = document.getElementById('joint_2')
-const joint_3 = document.getElementById('joint_3')
+const joints = document.getElementsByClassName('joint')
+const arms = document.getElementsByClassName('arm')
 const pen = document.getElementById('pen')
 const speed_arm_1 = document.getElementById('speed_arm_1')
 const speed_arm_2 = document.getElementById('speed_arm_2')
@@ -10,38 +9,14 @@ let step = 0
 let speed_1 = 2
 let speed_2 = 4
 let speed_3 = 3
-
-// const remove_childs = () => {
-//     let childs = body.getElementsByClassName('dot')
-//     const _childs = Array.from(childs)
-//     for (const child of _childs) {
-//         body.removeChild(child)
-//     }
-//     step = 0
-//     count = 0
-//     console.log('childs', childs);
-// }
-
-// speed_arm_1.onclick = () => {
-//     speed_1 += 1
-//     speed_1 %= 3
-//     speed_arm_1.innerText = `speed arm 1 = ${speed_1 + 1}`
-//     remove_childs()
-// }
-
-// speed_arm_2.onclick = () => {
-//     speed_2 += 1
-//     speed_2 %= 3
-//     speed_arm_2.innerText = `speed arm 2 = ${speed_2 + 1}`
-//     remove_childs()
-// }
+let _continue = true
 
 const move_arm = () => {
     count += 2
     let pen_coord = pen.getBoundingClientRect()
-    joint_1.style.transform = `translate(-50%, -50%) rotate(${count / (speed_1 + 1)}deg)`
-    joint_2.style.transform = `translate(-50%, -50%) rotate(${count / (speed_2 + 1)}deg)`
-    joint_3.style.transform = `translate(-50%, -50%) rotate(-${count / (speed_3 + 1)}deg)`
+    joints[0].style.transform = `translate(-50%, -50%) rotate(${count / (speed_1 + 1)}deg)`
+    joints[1].style.transform = `translate(-50%, -50%) rotate(${count / (speed_2 + 1)}deg)`
+    joints[2].style.transform = `translate(-50%, -50%) rotate(-${count / (speed_3 + 1)}deg)`
     if (step == 5 & count < 21605) {
         const dot = document.createElement('div')
         dot.className = 'dot'
@@ -52,9 +27,13 @@ const move_arm = () => {
         step = 0
     }
     step += 1
+    if (count > 21605 & _continue) {
+        arms[0].classList.add('arm_disappear')
+        arms[1].classList.add('arm_disappear')
+        arms[2].classList.add('arm_disappear')
+        _continue = false
+    }
 }
-
-
 
 setInterval(() => {
     move_arm()
