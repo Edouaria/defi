@@ -1,13 +1,15 @@
 const body = document.querySelector('body')
 const joint_1 = document.getElementById('joint_1')
 const joint_2 = document.getElementById('joint_2')
+const joint_3 = document.getElementById('joint_3')
 const pen = document.getElementById('pen')
 const speed_arm_1 = document.getElementById('speed_arm_1')
 const speed_arm_2 = document.getElementById('speed_arm_2')
 let count = 0
 let step = 0
-let speed_1 = 3
-let speed_2 = 2
+let speed_1 = 2
+let speed_2 = 4
+let speed_3 = 3
 
 // const remove_childs = () => {
 //     let childs = body.getElementsByClassName('dot')
@@ -35,11 +37,12 @@ let speed_2 = 2
 // }
 
 const move_arm = () => {
-    count += 1
+    count += 2
     let pen_coord = pen.getBoundingClientRect()
     joint_1.style.transform = `translate(-50%, -50%) rotate(${count / (speed_1 + 1)}deg)`
     joint_2.style.transform = `translate(-50%, -50%) rotate(${count / (speed_2 + 1)}deg)`
-    if (step == 5 & count < 4380) {
+    joint_3.style.transform = `translate(-50%, -50%) rotate(-${count / (speed_3 + 1)}deg)`
+    if (step == 5 & count < 21605) {
         const dot = document.createElement('div')
         dot.className = 'dot'
         // dot.style.transform = 'translate(-50%, -50%)'

@@ -30,7 +30,7 @@ button {
 
 #arm_1 {
     position: absolute;
-    width: 200px;
+    width: 100px;
     border: solid black 2px;
     top: 50%;
     left: 50%;
@@ -57,6 +57,26 @@ button {
     transform: translate(0%, -50%);
 }
 
+#joint_3 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background-color: black; */
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%)
+}
+
+#arm_3 {
+    position: absolute;
+    width: 100px;
+    border: solid black 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+}
+
 #pen {
     position: absolute;
     width: 20px;
@@ -73,7 +93,7 @@ button {
     /* width: 20px;
     height: 20px; */
     border-radius: 50%;
-    border: solid black 3px;
+    border: solid black 2px;
     /* background-color: black; */
     top: 50%;
     left: 100%;
