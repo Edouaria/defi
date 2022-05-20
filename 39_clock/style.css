@@ -4,9 +4,8 @@ body {
 }
 
 .clock {
-    position: relative;
+    position: inline;
     margin: auto;
-    padding: 10%;
     width: 400px;
     height: 400px;
     background-color: rgb(200, 200, 200);
