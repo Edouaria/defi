@@ -1,4 +1,4 @@
-let Arm = {
+const Arm = {
     x: 0,
     y: 0,
     length: 100,

@@ -1,32 +1,43 @@
-let canvas = document.getElementById('arm_canvas')
-    canvas_2 = document.getElementById('draw_canvas'),
-    context = canvas.getContext('2d'),
-    context_2 = canvas_2.getContext('2d'),
-    width = canvas.width = canvas_2.width = window.innerWidth,
-    height = canvas.height = canvas_2.height = window.innerHeight
+const Main = {
+    canvas: document.getElementById('arm_canvas'),
+    canvas_2: document.getElementById('draw_canvas'),
+    context: null,
+    context_2: null,
+    width: 0,
+    height: 0,
+    arm: null,
+    arm_2: null,
+    arm_3: null,
+    angle: 0,
+    launch: false,
 
+    init: function(Arm) {
+        this.context = this.canvas.getContext('2d')
+        this.context_2 = this.canvas_2.getContext('2d')
+        this.width = this.canvas.width = this.canvas_2.width = window.innerWidth
+        this.height = this.canvas.height = this.canvas_2.height = window.innerHeight
+        this.arm = Arm.create(this.width / 2, this.height / 2, 100, 0)
+        this.arm_2 = Arm.create(this.arm.getEndX(), this.arm.getEndY(), 100, 0)
+        this.arm_3 = Arm.create(this.arm_2.getEndX(), this.arm_2.getEndY(), 100, 0)
+        this.arm_2.parent = this.arm
+        this.arm_3.parent = this.arm_2
+    },
 
-let arm = Arm.create(width / 2, height / 2, 100, 0),
-    arm_2 = Arm.create(arm.getEndX(), arm.getEndY(), 100, 0),
-    arm_3 = Arm.create(arm_2.getEndX(), arm_2.getEndY(), 100, 0),
-    angle = 0,
-    launch = false
+    create: function(Arm) {
+        let obj = Object.create(this)
+        obj.init(Arm)
+        return obj
+    },
 
-arm_2.parent = arm
-arm_3.parent = arm_2
-
-function update() {
-    // straight_line(context, context_2, width, height, launch, angle, arm, arm_2)
-    boomrang(context, context_2, width, height, launch, angle, arm, arm_2, arm_3, update)
-    
-    angle += .05
-    requestAnimationFrame(update)
+    update: function(func) {
+        func(this.context, this.context_2, this.width, this.height, this.launch, this.angle, this.arm, this.arm_2, this.arm_3)
+        this.angle += .05
+    }
 }
 
-// const Main = {
-
-// }
+const main = Main.create(Arm)
 
 window.onload = function() {
-    update()   
+    main.update(boomrang)
+    requestAnimationFrame(window.onload)
 }
