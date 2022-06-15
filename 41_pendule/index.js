@@ -17,6 +17,7 @@ const move_arm = () => {
     joints[0].style.transform = `translate(-50%, -50%) rotate(${count / (speed_1 + 1)}deg)`
     joints[1].style.transform = `translate(-50%, -50%) rotate(${count / (speed_2 + 1)}deg)`
     joints[2].style.transform = `translate(-50%, -50%) rotate(-${count / (speed_3 + 1)}deg)`
+    arms[2].style.width = `${count % 50 + 50}px`
     if (step == 5 & count < 21605) {
         const dot = document.createElement('div')
         dot.className = 'dot'
