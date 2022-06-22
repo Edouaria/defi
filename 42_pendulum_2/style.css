@@ -1,0 +1,12 @@
+#arm_canvas {
+    position: absolute
+}
+
+#draw_canvas {
+    /* position: absolute */
+    display: inline;
+}
+
+button {
+    display: block
+}

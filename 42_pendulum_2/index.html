@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="models_list.js" defer></script>
+        <script src="model.js" defer></script>
+        <script src="arm.js" defer></script>
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <title>pendulum experiment</title>
+    </head>
+    <body>
+        <div class="my_buttons">
+            <button onclick={change_shape("cross_node")}>cross_node</button>
+            <button onclick={change_shape("teardrop")}>teardrop</button>
+            <button onclick={change_shape("teardrop_2")}>teardrop_2</button>
+            <button onclick={change_shape("teardrop_3")}>teardrop_3</button>
+            <button onclick={change_shape("teardrop_4")}>teardrop_4</button>
+            <button onclick={change_shape("circle")}>circle</button>
+            <button onclick={change_shape("oeuf")}>oeuf</button>
+            <button onclick={change_shape("oeuf_grid")}>oeuf_grid</button>
+            <button onclick={change_shape("oeuf_fiber")}>oeuf_fiber</button>
+            <button onclick={change_shape("straight_line")}>straight_line</button>
+            <button onclick={change_shape("tetar")}>tetar</button>
+            <button onclick={change_shape("stockings")}>stockings</button>
+            <button onclick={change_shape("boomrang")}>boomrang</button>
+            <button onclick={change_shape("oval_shape")}>oval_shape</button>
+            <button onclick={change_shape("oval_shape_2")}>oval_shape_2</button>
+            <button onclick={_clear()}>clear</button>
+        </div>
+        <canvas id="arm_canvas"></canvas>
+        <canvas id="draw_canvas"></canvas>
+    </body>
+</html>
