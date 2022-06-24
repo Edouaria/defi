@@ -1,7 +1,3 @@
-const _clear = () => {
-    delete main
-}
-
 const Main = {
     canvas: document.getElementById('arm_canvas'),
     canvas_2: document.getElementById('draw_canvas'),
@@ -36,17 +32,17 @@ const Main = {
     update: function(func) {
         func(this.context, this.context_2, this.width, this.height, this.launch, this.angle, this.arm, this.arm_2, this.arm_3)
         this.angle += .05
-    },
-
-    clear: function() {
-        console.log("je suis la méthode clear")
-        this.context_2.clearRect(0, 0, this.width, this.height)
     }
 }
 
-const main = Main.create(Arm)
+let main = Main.create(Arm)
+let reset = true
 
 window.onload = function() {
+    if (reset) {
+        main = Main.create(Arm)
+        reset = false
+    }
     main.update(draw_it)
     requestAnimationFrame(window.onload)
 }

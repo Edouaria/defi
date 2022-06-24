@@ -13,12 +13,13 @@ const shape_list = {
     "stockings": stockings,
     "boomrang": boomrang,
     "oval_shape": oval_shape,
-    "oval_shape_2": oval_shape_2,
+    // "oval_shape_2": oval_shape_2,
 }
 let current_shape = "cross_node"
 
 const change_shape = (msg) => {
     current_shape = msg
+    reset = true
 }
 
 const draw_it = (ctx, ctx2, w, h, lnch, agl, arm1, arm2, last_arm) => {

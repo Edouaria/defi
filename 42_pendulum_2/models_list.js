@@ -1,24 +1,23 @@
-const straight_line_with_2_arms = (ctx, ctx2, w, h, lnch, agl, arm1, arm2) => {
-    ctx.clearRect(0, 0, w, h)
-    arm1.angle = agl
-    arm2.angle = - agl * 2
-    arm2.x = arm1.getEndX()
-    arm2.y = arm1.getEndY()
-    arm1.render(ctx)
-    arm2.render(ctx)
+// const straight_line_with_2_arms = (ctx, ctx2, w, h, lnch, agl, arm1, arm2) => {
+//     ctx.clearRect(0, 0, w, h)
+//     arm1.angle = agl
+//     arm2.angle = - agl * 2
+//     arm2.x = arm1.getEndX()
+//     arm2.y = arm1.getEndY()
+//     arm1.render(ctx)
+//     arm2.render(ctx)
 
-    if (lnch) {
-        ctx2.beginPath()
-        ctx2.moveTo(arm2.getEndX(), arm2.getEndY())
-    }
-    lnch = true
-    ctx2.strokeStyle = 'rgba(0, 0, 0, 1)'
-    ctx2.lineTo(arm2.getEndX(), arm2.getEndY())
-    ctx2.stroke()
-}
+//     if (lnch) {
+//         ctx2.beginPath()
+//         ctx2.moveTo(arm2.getEndX(), arm2.getEndY())
+//     }
+//     lnch = true
+//     ctx2.strokeStyle = 'rgba(0, 0, 0, 1)'
+//     ctx2.lineTo(arm2.getEndX(), arm2.getEndY())
+//     ctx2.stroke()
+// }
 
 const cross_node = (agl, arm1, arm2, last_arm) => {
-    console.log('cross_node animation !!')
     arm1.angle = Math.cos(agl)
     arm2.angle = agl * 2
     last_arm.angle = - agl * 4
@@ -101,7 +100,7 @@ const oval_shape = (agl, arm1, arm2, last_arm) => {
     last_arm.angle = agl * 2
 }
 
-const oval_shape_2 = (arm1, arm2, agl) => {
-    arm1.angle = agl
-    arm2.angle = - agl * 2
-}
+// const oval_shape_2 = (arm1, arm2, agl) => {
+//     arm1.angle = agl
+//     arm2.angle = - agl * 2
+// }
