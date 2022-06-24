@@ -1,12 +1,28 @@
+body {
+    display: inline
+}
+
 #arm_canvas {
-    position: absolute
+    position: absolute;
 }
 
 #draw_canvas {
-    /* position: absolute */
-    display: inline;
+    position: absolute;
+}
+
+.my_buttons {
+    position: absolute;
+    left: 50px;
 }
 
 button {
-    display: block
+    display: block;
+    border: none;
+    padding: 10px;
+    width: 100px;
+}
+
+button:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
 }
