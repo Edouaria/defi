@@ -52,19 +52,19 @@ const circle = (agl, arm1, arm2, last_arm) => {
     last_arm.angle = agl
 }
 
-const oeuf = (agl, arm1, arm2, last_arm) => {
+const egg = (agl, arm1, arm2, last_arm) => {
     arm1.angle = agl
     arm2.angle = -Math.cos(agl)
     last_arm.angle = Math.cos(agl)
 }
 
-const oeuf_grid = (agl, arm1, arm2, last_arm) => {
+const egg_grid = (agl, arm1, arm2, last_arm) => {
     arm1.angle = agl
     arm2.angle = -Math.cos(agl)
     last_arm.angle = Math.cos(agl/.22)
 }
 
-const oeuf_fiber = (agl, arm1, arm2, last_arm) => {
+const egg_fiber = (agl, arm1, arm2, last_arm) => {
     arm1.angle = agl
     arm2.angle = -Math.cos(agl)
     last_arm.angle = Math.cos(agl*.22)
