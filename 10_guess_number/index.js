@@ -1,12 +1,15 @@
+const title = document.querySelector('p')
 const guess_number = document.getElementById("guess_number")
 const message = document.getElementById("message")
 const essai = document.getElementById("essai")
-let number = parseInt(Math.random()*1000)
+let range = 100
+let number = 0
 let count = 0
 
+title.innerText = `Choisi un nombre entre 0 et ${range}`
 // DÉFINIR UN NOMBRE ALÉATOIRE
 function random_number() {
-    number = parseInt(Math.random() * 1000);
+    number = parseInt(Math.random() * range)
 }
 
 // COMPARER LE NOMBRE RANDOM AVEC LE NOMBRE CHOISI PAR LE JOUEUR
