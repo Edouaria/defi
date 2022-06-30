@@ -10,3 +10,16 @@ substract = () => {
     result.innerHTML = input_1.value - input_2.value
 }
 
+multiply = () => {
+    result.innerHTML = input_1.value * input_2.value
+}
+
+divide = () => {
+    result.innerHTML = input_1.value / input_2.value
+}
+
+const reset = () => {
+    result.innerHTML = ''
+    input_1.value = ''
+    input_2.value = ''
+}
