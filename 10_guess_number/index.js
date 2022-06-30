@@ -15,7 +15,9 @@ function random_number() {
 // COMPARER LE NOMBRE RANDOM AVEC LE NOMBRE CHOISI PAR LE JOUEUR
 function guess() {
     // VÉRIFIER QUE LA VALEUR DE L'INPUT N'EST PAS VIDE ET QUE CE N'EST PAS UNE CHAINE DE CARACTERE
-    if (guess_number.value != "") {
+    if (guess_number.value == "") {
+        message.innerHTML = "veuillez rentrer un nombre"
+    } else {
         // SI LE NOMBRE EST INFÉRIEUR
         if (number < guess_number.value) {
             message.innerHTML = "C'est moins"
@@ -30,8 +32,6 @@ function guess() {
         }
         // INCRÉMENTER LE NOMBRE D'ESSAI
         count += 1
-    } else {
-        message.innerHTML = "veuillez rentrer un nombre"
     }
     // AFFICHER LE NOMBRE D'ESSAI
     essai.innerHTML = `nombre d'essai : ${count}`
@@ -39,9 +39,15 @@ function guess() {
 
 // RELANCER LA PARTIE
 function reset() {
+    // REGENERER UN NOMBRE ALÉATOIRE
     random_number()
+    // VIDER LES CHAMPS
     guess_number.value = ""
-    message.innerHTML = "..."
-    count = 0
+    message.innerHTML = ""
     essai.innerHTML = "nombre d'essai :"
+    // REMETTRE LE COMPTEUR À 0
+    count = 0
 }
+
+// INITIALISER LE NOMBRE AlÉATOIRE AU CHARGEMENT DE LA PAGE
+random_number()
