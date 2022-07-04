@@ -3,11 +3,11 @@ const overlay = document.getElementsByClassName('overlay')
 const num_essai = document.getElementById('num_essai')
 const signals = document.getElementById('signals')
 let code = []
-let true_code = [2, 1, 3, 2]
+let true_code = [2, 1, 3]
 let count = 0
 
-const colors = ['rgb(150, 0, 0)', 'rgb(0, 100, 0)', 'rgb(0, 0, 150)']
-const light_colors = ['rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(50, 50, 255)']
+const colors = ['rgb(50, 0, 0)', 'rgb(0, 50, 0)', 'rgb(0, 0, 50)']
+const light_colors = ['rgb(255, 0, 0)', 'rgb(0, 200, 0)', 'rgb(0, 0, 255)']
 
 divs[0].style.backgroundColor = colors[0]
 divs[1].style.backgroundColor = colors[1]
@@ -18,13 +18,12 @@ for (let i = 0; i < true_code.length; i++) {
     let result = document.createElement('div')
     result.className = 'result'
     if (i == true_code.length - 1) {
-        result.style.backgroundColor = colors[1]
+        result.style.backgroundColor = 'rgb(0, 50, 0)'
     } else {
-        result.style.backgroundColor = colors[0]
+        result.style.backgroundColor = 'rgb(50, 0, 0)'
     }
     signals.appendChild(result)
 }
-
 const results = document.getElementsByClassName('result')
 
 function reset_color() {
@@ -65,3 +64,30 @@ function reset() {
     code = []
     count = 0
 }
+
+function launch_sequence() {
+    let cnt = 0
+    let prev_cnt = 0
+    let anim = setInterval(() => {
+        if (cnt > prev_cnt) {
+            divs[true_code[prev_cnt]-1].style.backgroundColor = colors[true_code[prev_cnt]-1]
+            divs[true_code[prev_cnt]-1].style.transform = 'scale(1)'
+            divs[true_code[prev_cnt]-1].style.transitionDuration = '.3s'
+        }
+        prev_cnt = cnt
+
+        if (cnt < true_code.length) {
+            divs[true_code[cnt]-1].style.backgroundColor = light_colors[true_code[cnt]-1]
+            divs[true_code[cnt]-1].style.transform = 'scale(.9)'
+            divs[true_code[cnt]-1].style.transitionDuration = '.3s'
+        }
+
+        cnt += 1
+        if (cnt > true_code.length) {
+            divs[2].style.backgroundColor = colors[true_code[prev_cnt]-1]
+            clearInterval(anim)
+        }
+    }, 700)
+}
+
+// launch_sequence()

@@ -17,7 +17,7 @@ p {
 
 
 .my_btns {
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     width: 200px;
     height: 200px;
     margin-left: 20px;
