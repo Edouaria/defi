@@ -1,9 +1,7 @@
-const iterable = [1, 2, 3, 4]
-
-function multiple() {
+function multiple(tab) {
     let res = 1
-    for (let i in iterable) {
-        res *= iterable[i]
+    for (let i in tab) {
+        res *= tab[i]
     }
     console.log(res);
 }
@@ -35,9 +33,8 @@ function occurence() {
 // WITH MAP
 const tab = ['Batou', 'Makoto', 'Toguza', 'Akira', 'Tetsuo', 'Lin']
 function map_array() {
-    console.log(tab);
     tab.map((value, index) => {
-        console.log("VAL ", value, " I ", index);
+        console.log("INDEX", index, "VALUE", value);
     })
 }
 
