@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    background-color: rgb(40, 50, 50);
+}
+
+p {
+    color: white;
+}
+
+#container {
+    margin: 40px;
+}
+
+#btns_container {
+    display: flex;
+}
+
+
+.my_btns {
+    /* flex-shrink: 0; */
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    border-radius: 10%;
+}
+
+/* .my_btns:active {
+    transition-duration: .1s
+} */
+
+#signals {
+    margin-top: 20px
+}
+
+.result {
+    display: inline-block;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+button {
+    background-color: rgb(20,20,20);
+    font-size: 1.5rem;
+    color: rgb(240, 240, 240);
+    margin: 20px; 
+    width: 80px;
+    height: 40px;
+    border: none
+}
+
+button:hover {
+    background-color: rgb(240, 240, 240);
+    color: rgb(20,20,20)
+}

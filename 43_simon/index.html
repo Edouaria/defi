@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"></link>
+        <script src="index.js" defer></script>
+        <title>games</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="btns_container">
+                <div>
+                    <div class="my_btns" onmousedown="get_value(0)" onmouseup="reset_color()" onmouseleave="reset_color()"></div>
+                </div>
+                <div>
+                    <div class="my_btns" onmousedown="get_value(1)" onmouseup="reset_color()" onmouseleave="reset_color()"></div>
+                </div>
+                <div>
+                    <div class="my_btns" onmousedown="get_value(2)" onmouseup="reset_color()" onmouseleave="reset_color()"></div>
+                </div>
+            </div>
+            <div id="signals"></div>
+            <button onclick="reset_complete()">RESET</button>
+        </div>
+    </body>
+</html>
