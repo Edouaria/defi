@@ -13,8 +13,11 @@ function find_greater_number() {
         }
     }
     // AFFICHER LE RESULTAT
-    console.log(res);
+    console.log(res)
 }
 
 // LANCER LA FONCTION
 find_greater_number()
+
+// METHOD 2
+// console.log(Math.max(...ma_list))
