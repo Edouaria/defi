@@ -1,0 +1,78 @@
+/* TIMELINE */
+
+body {
+    background: black;
+}
+
+.timeline {
+    display: block;
+    width: 80%;
+    margin: 150px auto;
+}
+
+.timeline .heading {
+    margin-bottom: 150px;
+}
+
+.card {
+    background-color: tomato;
+    width: 45%;
+    padding: 30px;
+    border-radius: 10px;
+    display: block;
+    color: white;
+    margin: -80px -30px;
+    position: relative;
+}
+
+.card:nth-child(even) {
+    margin-left: auto;
+}
+
+.card:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.card:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    left: -8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: white;
+    z-index: -1;
+}
+
+.card:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    right: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.card:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    right: -8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: white;
+    z-index: -1;
+}
