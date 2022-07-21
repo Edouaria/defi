@@ -5,13 +5,13 @@ const signals = document.getElementById('signals')
 
 let results = signals.children
 let code = []
-let true_code = [1, 0, 2]
+let true_code = [random_color(), random_color(), random_color(), random_color()]
 let count = 0
 let button_is_active = false
 let sequence_correct = true
 
-const colors = ['rgb(50, 0, 10)', 'rgb(0, 50, 10)', 'rgb(0, 10, 50)']
-const light_colors = ['rgb(255, 0, 50)', 'rgb(0, 200, 50)', 'rgb(0, 50, 255)']
+const colors = ['rgb(50, 0, 10)', 'rgb(0, 50, 10)', 'rgb(0, 10, 50)', 'rgb(50, 50, 0)']
+const light_colors = ['rgb(255, 0, 50)', 'rgb(0, 200, 50)', 'rgb(0, 50, 255)', 'rgb(250, 200, 50)']
 
 const signal_colors = ['rgb(50, 0, 0)', 'rgb(0, 50, 0)']
 const signal_light_colors = ['rgb(255, 0, 0)', 'rgb(0, 200, 0)']
@@ -19,6 +19,11 @@ const signal_light_colors = ['rgb(255, 0, 0)', 'rgb(0, 200, 0)']
 divs[0].style.backgroundColor = colors[0]
 divs[1].style.backgroundColor = colors[1]
 divs[2].style.backgroundColor = colors[2]
+divs[3].style.backgroundColor = colors[3]
+
+function random_color() {
+    return parseInt(Math.random() * divs.length)
+}
 
 function start() {
     // DELETE SIGNALS
@@ -68,7 +73,7 @@ function get_value(val) {
             results[true_code.length - 1].style.backgroundColor = signal_light_colors[1]
             button_is_active = false
             sequence_correct = true
-            true_code.push(parseInt(Math.random() * 3))
+            true_code.push(random_color())
             setTimeout(() => {
                 reset()
                 launch_sequence()

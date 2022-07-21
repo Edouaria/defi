@@ -12,21 +12,39 @@ p {
 }
 
 #btns_container {
-    display: flex;
+    display: grid;
+    grid-auto-rows: minmax(220px, auto);
+    width: 0;
+    background-color: red;
 }
 
 
 .my_btns {
-    /* flex-shrink: 0; */
     width: 200px;
     height: 200px;
     margin-left: 20px;
     border-radius: 10%;
 }
 
-/* .my_btns:active {
-    transition-duration: .1s
-} */
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.two {
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.three {
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+.four {
+    grid-column: 1/2;
+    grid-row: 2/2;
+}
 
 #signals {
     margin-top: 20px

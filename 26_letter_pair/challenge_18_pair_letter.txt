@@ -1,2 +1,4 @@
 Créez une fonction qui renvoie toutes les pairs de lettres possible.
-exemple : aa ab ac ad .... jusqu'à zz
+exemple : ab ac ad .... jusqu'à zy
+attention deux même lettres ne compte pas.
+exemple : aa bb ... zz
