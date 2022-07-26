@@ -5,7 +5,7 @@ const signals = document.getElementById('signals')
 
 let results = signals.children
 let code = []
-let true_code = [random_color(), random_color(), random_color(), random_color()]
+let true_code = [random_color(), random_color(), random_color()]
 let count = 0
 let button_is_active = false
 let sequence_correct = true
@@ -101,31 +101,31 @@ function reset_complete() {
 }
 
 function launch_sequence() {
-    let cnt = 0
-    let prev_cnt = 0
+    let count = 0
+    let prev_count = 0
     let msg = 'waiting'
     let anim = setInterval(() => {
         // WAIT THAT LIGHT TURN OFF BEFORE LIGHT TURN ON
         setTimeout(() => {
             // TURN OFF PREVIOUS COLORS
-            divs[true_code[prev_cnt]].style.backgroundColor = colors[true_code[prev_cnt]]
-            divs[true_code[prev_cnt]].style.transform = 'scale(1)'
-            divs[true_code[prev_cnt]].style.transitionDuration = '.3s'
-            prev_cnt = cnt
+            divs[true_code[prev_count]].style.backgroundColor = colors[true_code[prev_count]]
+            divs[true_code[prev_count]].style.transform = 'scale(1)'
+            divs[true_code[prev_count]].style.transitionDuration = '.3s'
+            prev_count = count
             msg = 'time is out'
         }, 300)
         if (msg == 'time is out') {
             // TURN ON CURRENT COLORS
-            if (cnt < true_code.length) {
-                divs[true_code[cnt]].style.backgroundColor = light_colors[true_code[cnt]]
-                divs[true_code[cnt]].style.transform = 'scale(.9)'
-                divs[true_code[cnt]].style.transitionDuration = '.3s'
+            if (count < true_code.length) {
+                divs[true_code[count]].style.backgroundColor = light_colors[true_code[count]]
+                divs[true_code[count]].style.transform = 'scale(.9)'
+                divs[true_code[count]].style.transitionDuration = '.3s'
             }
             msg = 'waiting'
-            cnt += 1
+            count += 1
         }
         // IF SEQUENCE IS FINISH
-        if (cnt == true_code.length) {
+        if (count == true_code.length) {
             button_is_active = true
             clearInterval(anim)
         }
