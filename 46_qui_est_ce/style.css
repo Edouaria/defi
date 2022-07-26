@@ -1,0 +1,55 @@
+body {
+    display: grid;
+}
+
+.bonhomme {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    background-color: rgba(200, 100, 255, .3);
+    border: solid 2px coral;
+    border-radius: 10%;
+    margin: 5px
+}
+
+#container {
+    grid-column: 1;
+    width: 100%;
+}
+
+#side_button {
+    grid-column: 2;
+    margin: 5px;
+    background-color: rgba(200, 100, 255, .3);
+    border: solid 2px coral;
+    border-radius: 10px;
+    width: 200px;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 10px;
+    border: solid 2px coral;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.white_buttons {
+    background-color: white;
+}
+
+#reset {
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    width: 100px;
+    background-color: white;
+    justify-content: center;
+    margin-bottom: 40px
+}
+
+#reset:active {
+    background-color: black;
+    color: white
+}
