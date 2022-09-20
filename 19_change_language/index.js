@@ -1,27 +1,35 @@
-var switch_on = true
+let is_fr = true
 
-load_json = (url) => {
+// JE RÉCUPÈRE LA DONNÉE AU FORMAT JSON
+function load_json(url) {
     fetch(url)
-        .then(resp => resp.json())
-        .then(data => appendData(data))
+    .then(resp => resp.json())
+    .then(data => append_data(data))
 }
 
-function appendData(data) {
-    document.getElementById('title').innerHTML = data["title"];
-    document.getElementById('button').innerHTML = data["button"];
-    document.getElementById('description').innerHTML = data["description"]
-    document.getElementById('home').innerHTML = data["home"]
-    document.getElementById('features').innerHTML = data["features"]
-    document.getElementById('contact').innerHTML = data["contact"]
+// J'INJECTE LES DONÉES DANS LA PAGE HTML
+function append_data(data) {
+    document.getElementById('title').innerText = data['title']
+    document.getElementById('button').innerText = data['button']
+    document.getElementById('description').innerText = data['description']
+    document.getElementById('home').innerText = data['home']
+    document.getElementById('features').innerText = data['features']
+    document.getElementById('contact').innerText = data['contact']
 }
 
+// JE CHANGE DE LANGUE AVEC UN TOGGLE
 function switch_lang() {
-    switch_on = !switch_on
-    if (switch_on == true) {
-        load_json("./data_fr.json")
+    is_fr = !is_fr
+    // SI LE TOGGLE EST À TRUE
+    if (is_fr) {
+        // JE LUI PASSE LES DONÉES EN FRANÇAIS
+        load_json('./data_fr.json')
+    // SI LE TOGGLE EST À FALSE
     } else {
-        load_json("./data_en.json")
+        // JE LUI PASSE LES DONÉES EN ANGLAIS
+        load_json('./data_en.json')
     }
 }
 
-load_json("./data_fr.json")
+// J'INITIALIZE LES DONÉES AU CHARGEMENT DE LA PAGE
+load_json('./data_fr.json')
