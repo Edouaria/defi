@@ -219,4 +219,48 @@ const persos = {
             "cheveux": true
         }
     },
+    "deedlit": {
+        "img_src": "./img/pygame_logo.png",
+        "slot": 20,
+        "details": {
+            "lunette": false,
+            "moustache": true,
+            "deux yeux": true,
+            "cigare": true,
+            "cheveux": true
+        }
+    },
+    "parn": {
+        "img_src": "./img/vim_logo.png",
+        "slot": 21,
+        "details": {
+            "lunette": true,
+            "moustache": true,
+            "deux yeux": false,
+            "cigare": true,
+            "cheveux": true
+        }
+    },
+    "etoh": {
+        "img_src": "./img/ubuntu_logo.png",
+        "slot": 22,
+        "details": {
+            "lunette": true,
+            "moustache": true,
+            "deux yeux": true,
+            "cigare": false,
+            "cheveux": true
+        }
+    },
+    "slayn": {
+        "img_src": "./img/bpytop_logo.png",
+        "slot": 22,
+        "details": {
+            "lunette": true,
+            "moustache": true,
+            "deux yeux": true,
+            "cigare": true,
+            "cheveux": false
+        }
+    },
 }
