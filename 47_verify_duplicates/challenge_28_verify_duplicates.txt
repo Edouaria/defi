@@ -1,0 +1,1 @@
+Un tableau contient n entiers (2 < n < 100) aléatoires tous compris entre 0 et 500. Vérifier qu'ils sont tous différents.
